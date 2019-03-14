@@ -1,0 +1,38 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://HoppyDays/Scenes/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://HoppyDays/Scenes/Camera2D.tscn" type="PackedScene" id=2]
+[ext_resource path="res://HoppyDays/Scenes/PlatformTiles.tres" type="TileSet" id=3]
+
+[node name="Level1" type="Node2D" index="0"]
+
+position = Vector2( 0, 1.67018 )
+
+[node name="Player" parent="." index="0" instance=ExtResource( 1 )]
+
+position = Vector2( 169.556, 275.481 )
+world_limit = 3000
+
+[node name="Camera2D" parent="Player" index="2" instance=ExtResource( 2 )]
+
+[node name="TileMap" type="TileMap" parent="." index="1"]
+
+mode = 0
+tile_set = ExtResource( 3 )
+cell_size = Vector2( 64, 64 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( 65537, 4, 0, 65542, 4, 0, 262153, 4, 0, 327715, 1, 0, 393216, 2, 0, 524298, 2, 0, 589839, 2, 0, 589844, 2, 0, 589849, 2, 0, 589863, 1, 0, 655365, 2, 0, 720953, 0, 0, 720976, 3, 0, 786463, 1, 0, 852040, 7, 0, 1048645, 7, 0, 1245248, 7, 0, 1441848, 0, 0, 1572912, 0, 0 )
+
+

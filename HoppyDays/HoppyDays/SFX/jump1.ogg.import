@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/jump1.ogg-3d0bae151db5f4a9b0ca8c642f3c8563.oggstr"
+
+[deps]
+
+source_file="res://HoppyDays/SFX/jump1.ogg"
+dest_files=[ "res://.import/jump1.ogg-3d0bae151db5f4a9b0ca8c642f3c8563.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

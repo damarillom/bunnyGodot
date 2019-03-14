@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/coin_SFX.wav-b9a01e198b04b98d85d747e09e6af9af.sample"
+
+[deps]
+
+source_file="res://HoppyDays/SFX/coin_SFX.wav"
+dest_files=[ "res://.import/coin_SFX.wav-b9a01e198b04b98d85d747e09e6af9af.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0
