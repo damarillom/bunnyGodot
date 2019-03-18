@@ -10,7 +10,7 @@ const SPEED = 400 #750
 const JUMP_SPEED = -750  #-1750
 const UP = Vector2(0,-1)
 const GRAVITY = 750 #1000  # 3600
-export var world_limit=3000
+export var world_limit = 3000
 
 func  _physics_process(delta):
 	fall(delta)
@@ -51,8 +51,8 @@ func fall(delta):
 	else:
 		motion.y += GRAVITY * delta
 		#motion.x = 0
-	if motion.y == world_limit:
-		end_game()
+	if motion.y > world_limit:
+		get_parent().end_game()
 
 func end_game():
 	get_tree().change_scene("res://HoppyDays/Scenes/GameOver.tscn")
