@@ -5,7 +5,7 @@
 [ext_resource path="res://HoppyDays/GFX/Background/bg_layer3.png" type="Texture" id=3]
 [ext_resource path="res://HoppyDays/GFX/Background/bg_layer4.png" type="Texture" id=4]
 
-[node name="ParallaxBackground" type="ParallaxBackground"]
+[node name="ParallaxBackground" type="ParallaxBackground" index="0"]
 
 layer = -1
 offset = Vector2( 0, 0 )
@@ -29,6 +29,8 @@ _sections_unfolded = [ "Motion" ]
 [node name="Sprite" type="Sprite" parent="ParallaxLayer" index="0"]
 
 texture = ExtResource( 1 )
+centered = false
+_sections_unfolded = [ "Animation", "Offset", "Region" ]
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="." index="1"]
 
@@ -40,6 +42,8 @@ _sections_unfolded = [ "Motion" ]
 [node name="Sprite" type="Sprite" parent="ParallaxLayer2" index="0"]
 
 texture = ExtResource( 2 )
+centered = false
+_sections_unfolded = [ "Offset" ]
 
 [node name="ParallaxLayer3" type="ParallaxLayer" parent="." index="2"]
 
@@ -51,6 +55,8 @@ _sections_unfolded = [ "Motion" ]
 [node name="Sprite" type="Sprite" parent="ParallaxLayer3" index="0"]
 
 texture = ExtResource( 3 )
+centered = false
+_sections_unfolded = [ "Offset" ]
 
 [node name="ParallaxLayer4" type="ParallaxLayer" parent="." index="3"]
 
@@ -62,5 +68,7 @@ _sections_unfolded = [ "Motion" ]
 [node name="Sprite" type="Sprite" parent="ParallaxLayer4" index="0"]
 
 texture = ExtResource( 4 )
+centered = false
+_sections_unfolded = [ "Offset" ]
 
 

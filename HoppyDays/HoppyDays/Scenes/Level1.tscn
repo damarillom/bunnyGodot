@@ -6,7 +6,7 @@
 [ext_resource path="res://HoppyDays/Scenes/PlatformTiles.tres" type="TileSet" id=4]
 [ext_resource path="res://HoppyDays/Scenes/SpikesTop.tscn" type="PackedScene" id=5]
 
-[node name="Level1" type="Node2D" index="0"]
+[node name="Level1" type="Node2D"]
 
 position = Vector2( 0, 1.67018 )
 script = ExtResource( 1 )
@@ -48,8 +48,9 @@ _sections_unfolded = [ "Cell", "Collision" ]
 
 position = Vector2( 910.746, 535.063 )
 
-[node name="SpikesButtom" parent="Spikes" index="1" instance=ExtResource( 5 )]
+[node name="SpikesBottom" parent="Spikes" index="1" instance=ExtResource( 5 )]
 
-position = Vector2( 2340.36, 493.016 )
+position = Vector2( 2334.35, 488.79 )
+rotation = -3.16124
 
 
