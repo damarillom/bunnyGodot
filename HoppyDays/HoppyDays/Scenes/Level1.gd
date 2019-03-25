@@ -17,9 +17,13 @@ func hurt():
 	Global.Player.hurt()
 		
 func coin_up():
-	if (coins == 6):
+	if (coins == 5):
 		lifes += 1
 		coins = 0
+		Global.GUI.update_GUI(lifes)
+		Global.GUI.update_Coins(coins)
 	else:
 		coins += 1
+		Global.GUI.update_Coins(coins)
+		
 		

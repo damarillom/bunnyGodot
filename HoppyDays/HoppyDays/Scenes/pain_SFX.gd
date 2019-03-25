@@ -1,19 +1,13 @@
-extends Node
+extends AudioStreamPlayer
 
 # class member variables go here, for example:
 # var a = 2
 # var b = "textvar"
-var Player;
-var GameState;
-var GUI;
-
-var jump_sfx;
-var pain_sfx;
 
 func _ready():
 	# Called when the node is added to the scene for the first time.
 	# Initialization here
-	pass
+	Global.pain_sfx=self
 
 #func _process(delta):
 #	# Called every frame. Delta is time since last frame.

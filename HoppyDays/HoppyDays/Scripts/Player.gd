@@ -53,7 +53,7 @@ func fall(delta):
 	else:
 		motion.y += GRAVITY * delta
 		#motion.x = 0
-	if motion.y > world_limit:
+	if position.y > world_limit:
 		#get_parent().end_game()
 		Global.GameState.end_game()
 
@@ -80,9 +80,11 @@ func jump():
 	if is_on_floor() and Input.is_action_pressed("ui_up"):
 		motion.y = JUMP_SPEED
 		#$AnimatedSprite.play("jump")
+		Global.jump_sfx.play()
 		
 func hurt():
 	motion.y = JUMP_SPEED
+	Global.pain_sfx.play()
 
 
 	
