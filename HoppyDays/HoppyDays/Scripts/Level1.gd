@@ -7,7 +7,7 @@ func _ready():
 	print(Global.GameState)
 	
 func end_game():
-	get_tree().change_scene("res://HoppyDays/Scenes/GameOver.tscn")
+	get_tree().change_scene("res://HoppyDays/Scenes/Levels/GameOver.tscn")
 	
 func hurt():
 	lifes = lifes - 1

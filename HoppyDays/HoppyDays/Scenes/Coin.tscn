@@ -4,7 +4,7 @@
 [ext_resource path="res://HoppyDays/GFX/Items/bronze_2.png" type="Texture" id=2]
 [ext_resource path="res://HoppyDays/GFX/Items/bronze_3.png" type="Texture" id=3]
 [ext_resource path="res://HoppyDays/GFX/Items/bronze_4.png" type="Texture" id=4]
-[ext_resource path="res://HoppyDays/Scenes/Coin.gd" type="Script" id=5]
+[ext_resource path="res://HoppyDays/Scripts/Coin.gd" type="Script" id=5]
 [ext_resource path="res://HoppyDays/SFX/coin_SFX.wav" type="AudioStream" id=6]
 
 [sub_resource type="SpriteFrames" id=1]
@@ -70,7 +70,7 @@ script = ExtResource( 5 )
 
 [node name="Area2D" type="Area2D" parent="." index="0"]
 
-scale = Vector2( 1.02131, 1.02131 )
+scale = Vector2( 1.28417, 1.28417 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0

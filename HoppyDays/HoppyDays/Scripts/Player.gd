@@ -56,6 +56,7 @@ func fall(delta):
 	if position.y > world_limit:
 		#get_parent().end_game()
 		Global.GameState.end_game()
+		
 
 """func end_game():
 	get_tree().change_scene("res://HoppyDays/Scenes/GameOver.tscn")"""
@@ -85,6 +86,10 @@ func jump():
 func hurt():
 	motion.y = JUMP_SPEED
 	Global.pain_sfx.play()
+	
+func boost():
+	motion.y = JUMP_SPEED * 2
+	Global.jump_sfx.play()
 
 
 	

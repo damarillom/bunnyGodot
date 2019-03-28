@@ -10,6 +10,8 @@ var GUI;
 var jump_sfx;
 var pain_sfx;
 
+var Level1="res://HoppyDays/Scenes/Levels/Level1.tscn"
+var GameOver="res://HoppyDays/Scenes/Levels/GameOver.tscn"
 func _ready():
 	# Called when the node is added to the scene for the first time.
 	# Initialization here
