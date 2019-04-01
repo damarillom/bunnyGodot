@@ -2,12 +2,18 @@ extends Node2D
 
 var lifes = 3
 var coins = 0
+
+onready var GUI=Global.GUI
+
 func _ready():
 	Global.GameState = self
 	print(Global.GameState)
 	
 func end_game():
 	get_tree().change_scene("res://HoppyDays/Scenes/Levels/GameOver.tscn")
+	
+func win_game():
+	get_tree().change_scene("res://HoppyDays/Scenes/Levels/GameWin.tscn")
 	
 func hurt():
 	lifes = lifes - 1

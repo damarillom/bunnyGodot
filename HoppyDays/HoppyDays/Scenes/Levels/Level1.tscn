@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://HoppyDays/Scripts/Level1.gd" type="Script" id=1]
 [ext_resource path="res://HoppyDays/Scenes/Player.tscn" type="PackedScene" id=2]
@@ -6,16 +6,17 @@
 [ext_resource path="res://HoppyDays/Scenes/PlatformTiles.tres" type="TileSet" id=4]
 [ext_resource path="res://HoppyDays/Scenes/SpikesTop.tscn" type="PackedScene" id=5]
 [ext_resource path="res://HoppyDays/Scenes/Spikeman.tscn" type="PackedScene" id=6]
-[ext_resource path="res://HoppyDays/Scenes/Coin.tscn" type="PackedScene" id=7]
-[ext_resource path="res://HoppyDays/SFX/Chiptune_Adventures_1.ogg" type="AudioStream" id=8]
-[ext_resource path="res://HoppyDays/SFX/pain.ogg" type="AudioStream" id=9]
-[ext_resource path="res://HoppyDays/Scripts/pain_SFX.gd" type="Script" id=10]
-[ext_resource path="res://HoppyDays/SFX/jump1.ogg" type="AudioStream" id=11]
-[ext_resource path="res://HoppyDays/Scripts/jump_SFX.gd" type="Script" id=12]
-[ext_resource path="res://HoppyDays/Scenes/Jumpad.tscn" type="PackedScene" id=13]
-[ext_resource path="res://HoppyDays/Scenes/Portal.tscn" type="PackedScene" id=14]
+[ext_resource path="res://HoppyDays/Scenes/Cloud.tscn" type="PackedScene" id=7]
+[ext_resource path="res://HoppyDays/Scenes/Coin.tscn" type="PackedScene" id=8]
+[ext_resource path="res://HoppyDays/SFX/Chiptune_Adventures_1.ogg" type="AudioStream" id=9]
+[ext_resource path="res://HoppyDays/SFX/pain.ogg" type="AudioStream" id=10]
+[ext_resource path="res://HoppyDays/Scripts/pain_SFX.gd" type="Script" id=11]
+[ext_resource path="res://HoppyDays/SFX/jump1.ogg" type="AudioStream" id=12]
+[ext_resource path="res://HoppyDays/Scripts/jump_SFX.gd" type="Script" id=13]
+[ext_resource path="res://HoppyDays/Scenes/Jumpad.tscn" type="PackedScene" id=14]
+[ext_resource path="res://HoppyDays/Scenes/Portal.tscn" type="PackedScene" id=15]
 
-[node name="Level1" type="Node2D"]
+[node name="Level1" type="Node2D" index="0"]
 
 position = Vector2( 0, 1.67018 )
 script = ExtResource( 1 )
@@ -66,8 +67,6 @@ rotation = -3.16124
 
 [node name="Enemic" type="Node2D" parent="." index="3"]
 
-editor/display_folded = true
-
 [node name="Spikeman" parent="Enemic" index="0" instance=ExtResource( 6 )]
 
 position = Vector2( 1287.72, 554.817 )
@@ -76,34 +75,43 @@ position = Vector2( 1287.72, 554.817 )
 
 position = Vector2( 3513.84, 702.084 )
 
+[node name="Cloud" parent="Enemic" index="2" instance=ExtResource( 7 )]
+
+position = Vector2( 3317.2, 195.677 )
+
 [node name="Coins" type="Node2D" parent="." index="4"]
 
 editor/display_folded = true
 
-[node name="Coin" parent="Coins" index="0" instance=ExtResource( 7 )]
+[node name="Coin" parent="Coins" index="0" instance=ExtResource( 8 )]
 
 position = Vector2( 1797.73, 535.065 )
-
-[node name="Coin2" parent="Coins" index="1" instance=ExtResource( 7 )]
-
-position = Vector2( 3247.34, 1453.4 )
-
-[node name="Coin3" parent="Coins" index="2" instance=ExtResource( 7 )]
-
-position = Vector2( 3782.41, 432.606 )
-
-[node name="Coin4" parent="Coins" index="3" instance=ExtResource( 7 )]
-
-position = Vector2( 2609.82, 527.476 )
 frame = 0
 
-[node name="Coin5" parent="Coins" index="4" instance=ExtResource( 7 )]
+[node name="Coin2" parent="Coins" index="1" instance=ExtResource( 8 )]
+
+position = Vector2( 3247.34, 1453.4 )
+frame = 0
+
+[node name="Coin3" parent="Coins" index="2" instance=ExtResource( 8 )]
+
+position = Vector2( 3782.41, 432.606 )
+frame = 0
+
+[node name="Coin4" parent="Coins" index="3" instance=ExtResource( 8 )]
+
+position = Vector2( 2609.82, 527.476 )
+frame = 3
+
+[node name="Coin5" parent="Coins" index="4" instance=ExtResource( 8 )]
 
 position = Vector2( 2177.21, 736.189 )
+frame = 0
 
-[node name="Coin6" parent="Coins" index="5" instance=ExtResource( 7 )]
+[node name="Coin6" parent="Coins" index="5" instance=ExtResource( 8 )]
 
 position = Vector2( 496.117, 569.219 )
+frame = 0
 
 [node name="Sounds" type="Node2D" parent="." index="5"]
 
@@ -111,7 +119,7 @@ editor/display_folded = true
 
 [node name="Music" type="AudioStreamPlayer" parent="Sounds" index="0"]
 
-stream = ExtResource( 8 )
+stream = ExtResource( 9 )
 volume_db = 0.0
 pitch_scale = 1.0
 autoplay = true
@@ -120,38 +128,40 @@ bus = "Master"
 
 [node name="pain_SFX" type="AudioStreamPlayer" parent="Sounds" index="1"]
 
-stream = ExtResource( 9 )
+stream = ExtResource( 10 )
 volume_db = 0.0
 pitch_scale = 1.0
 autoplay = false
 mix_target = 0
 bus = "Master"
-script = ExtResource( 10 )
+script = ExtResource( 11 )
 
 [node name="jump_SFX" type="AudioStreamPlayer" parent="Sounds" index="2"]
 
-stream = ExtResource( 11 )
+stream = ExtResource( 12 )
 volume_db = 0.0
 pitch_scale = 1.0
 autoplay = false
 mix_target = 0
 bus = "Master"
-script = ExtResource( 12 )
+script = ExtResource( 13 )
 
 [node name="Jumpads" type="Node2D" parent="." index="6"]
 
 editor/display_folded = true
 
-[node name="Jumpad" parent="Jumpads" index="0" instance=ExtResource( 13 )]
+[node name="Jumpad" parent="Jumpads" index="0" instance=ExtResource( 14 )]
 
 position = Vector2( 2413.53, 336.381 )
 
 [node name="Node2D" type="Node2D" parent="." index="7"]
 
-[node name="Portal" parent="Node2D" index="0" instance=ExtResource( 14 )]
+position = Vector2( 69.8848, -41.9308 )
+
+[node name="Portal" parent="Node2D" index="0" instance=ExtResource( 15 )]
 
 position = Vector2( 5306.72, 639.411 )
 scale = Vector2( 0.850376, 1.5471 )
-_sections_unfolded = [ "Material", "Visibility", "Z Index" ]
+_sections_unfolded = [ "Audio Bus", "Collision", "Material", "Transform", "Visibility", "Z Index" ]
 
 
